@@ -1,0 +1,99 @@
+$fontSize : 13px;
+
+.navbar-brand {
+  color: #fdcc52;
+  font-size: $fontSize;
+
+  &:hover {
+    color: #f8d888;
+  }
+}
+
+.navbar-toggler {
+  font-size: $fontSize;
+}
+
+.navbar {
+  padding: 0 5px 0 20px;
+
+  .nav-link {
+    font-size: $fontSize;
+  }
+}
+
+// .bg-light {
+//   background-color: transparent  !important;;
+// }
+.nav-color1 {
+  background-color: transparent !important;
+}
+
+.nav-color2 {
+  background-color: #f8f9fa !important;
+}
+
+.navbar {
+  width: 100%;
+  position: fixed;
+  z-index: 5;
+
+  .list {
+    ul {
+      list-style-type: none;
+
+      li {
+        float: left;
+
+        a {
+          font-size: 9px;
+          font-family: Lato, Helvetica, Arial, sans-serif;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: rgb(194, 186, 186);
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  .list {
+    ul {
+      li {
+        a:hover {
+          color: rgb(226, 202, 202);
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggler {
+  visibility: hidden;
+}
+
+.toggle-list {
+  visibility: hidden;
+}
+
+@media all and (min-width: 0px) and (max-width: 670px) {
+  nav {
+    background-color: aliceblue !important;
+  }
+
+  .navbar-toggler {
+    visibility: visible;
+  }
+
+  .list {
+    display: none;
+  }
+
+  .toggle-list {
+    visibility: visible;
+  }
+
+  .nav-color1 {
+    background-color: aliceblue !important;
+  }
+}

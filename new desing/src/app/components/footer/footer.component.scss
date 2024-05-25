@@ -1,0 +1,16 @@
+.footer {
+  padding: 25px 0;
+  text-align: center;
+  color: rgba(255, 255, 255, .3);
+  background-color: #222;
+
+  p {
+    span {
+      word-spacing: 4px;
+    }
+
+    span:hover {
+      color: #fdcc52;
+    }
+  }
+}

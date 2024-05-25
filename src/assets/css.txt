@@ -1,0 +1,567 @@
+Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+
+/////////////////////////////////////
+Use Multiple Google Fonts
+Note: Requesting multiple fonts may slow down your web pages! So be careful about that.
+To use multiple Google fonts, just separate the font names with a pipe character (|), like this:
+Example
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong"> هام
+<style>
+h1.a {font-family: "Audiowide", sans-serif;}
+h1.b {font-family: "Sofia", sans-serif;}
+h1.c {font-family: "Trirong", serif;}
+</style>
+</head>
+
+
+//////////////////////////////////////////////////////////////////
+Enabling Font Effects
+Google has also enabled different font effects that you can use.
+1-
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+
+<h1 class="font-effect-fire">Sofia on Fire</h1>
+
+</body>
+2-
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+<style>
+body {
+  font-family: "Sofia", sans-serif;
+  font-size: 30px;
+}
+</style>
+</head>
+<body>
+<h1 class="font-effect-neon">Neon Effect</h1>
+<h1 class="font-effect-outline">Outline Effect</h1>
+<h1 class="font-effect-emboss">Emboss Effect</h1>
+<h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+</body>
+
+///////////////////////////////////////////////////////////////////
+
+The cursor Property
+
+<p>Mouse over the words to change the cursor.</p>
+<span style="cursor:auto">auto</span><br>
+<span style="cursor:crosshair">crosshair</span><br>
+<span style="cursor:default">default</span><br>
+<span style="cursor:e-resize">e-resize</span><br>
+<span style="cursor:help">help</span><br>
+<span style="cursor:move">move</span><br>
+<span style="cursor:n-resize">n-resize</span><br>
+<span style="cursor:ne-resize">ne-resize</span><br>
+<span style="cursor:nw-resize">nw-resize</span><br>
+<span style="cursor:pointer">pointer</span><br>
+<span style="cursor:progress">progress</span><br>
+<span style="cursor:s-resize">s-resize</span><br>
+<span style="cursor:se-resize">se-resize</span><br>
+<span style="cursor:sw-resize">sw-resize</span><br>
+<span style="cursor:text">text</span><br>
+<span style="cursor:w-resize">w-resize</span><br>
+<span style="cursor:wait">wait</span><br>
+
+/////////////////////////////////////////////////////////
+
+Remove Default Settings
+Example
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+////////////////////////////////////////
+
+list-style-type
+<style>
+ul.a {list-style-type: circle;}
+ul.b {list-style-type: disc;}
+ul.c {list-style-type: square;}
+ol.d {list-style-type: armenian;}
+ol.e {list-style-type: cjk-ideographic;}
+ol.f {list-style-type: decimal;}
+ol.g {list-style-type: decimal-leading-zero;}
+ol.h {list-style-type: georgian;}
+ol.i {list-style-type: hebrew;}
+ol.j {list-style-type: hiragana;}
+ol.k {list-style-type: hiragana-iroha;}
+ol.l {list-style-type: katakana;}
+ol.m {list-style-type: katakana-iroha;}
+ol.n {list-style-type: lower-alpha;}
+ol.o {list-style-type: lower-greek;}
+ol.p {list-style-type: lower-latin;}
+ol.q {list-style-type: lower-roman;}
+ol.r {list-style-type: upper-alpha;}
+ol.s {list-style-type: upper-latin;}
+ol.t {list-style-type: upper-roman;}
+ol.u {list-style-type: none;}
+ol.v {list-style-type: inherit;}
+</style>
+
+///////////////////////////////////////////////////////////
+
+The display Property Values
+The display property has many values:
+
+Value	        Description
+inline	        Displays an element as an inline element
+block	        Displays an element as a block element
+contents	Makes the container disappear, making the child elements children of the element the next level up in the DOM
+flex	        Displays an element as a block-level flex container
+grid	        Displays an element as a block-level grid container
+inline-block	Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values
+inline-flex	Displays an element as an inline-level flex container
+inline-grid	Displays an element as an inline-level grid container
+inline-table	The element is displayed as an inline-level table
+list-item	Let the element behave like a <li> element
+run-in	        Displays an element as either block or inline, depending on context
+table	        Let the element behave like a <table> element
+table-caption	Let the element behave like a <caption> element
+table-column-group	Let the element behave like a <colgroup> element
+table-header-group	Let the element behave like a <thead> element
+table-footer-group	Let the element behave like a <tfoot> element
+table-row-group	        Let the element behave like a <tbody> element
+table-cell	        Let the element behave like a <td> element
+table-column	        Let the element behave like a <col> element
+table-row	        Let the element behave like a <tr> element
+none	                The element is completely removed
+
+///////////////////////////////////////////////////////////////////////////////////
+
+en we can add the clearfix hack to the containing element to fix this problem:
+Example
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+////////////////////////////////////////////////////
+
+filter
+https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_filters
+.blur {filter: blur(4px);}
+.brightness {filter: brightness(250%);}
+.contrast {filter: contrast(180%);}
+.grayscale {filter: grayscale(100%);}
+.huerotate {filter: hue-rotate(180deg);}
+.invert {filter: invert(100%);}
+.opacity {filter: opacity(50%);}
+.saturate {filter: saturate(7);}
+.sepia {filter: sepia(100%);}
+.shadow {filter: drop-shadow(8px 8px 10px green);}
+</style>
+
+/////////////////////////////////////////////////////////////
+
+reverce photo diriction قلب اتجاه الصورة
+img:hover {
+  transform: scaleX(-1);
+}
+
+//////////////////////////////////////
+
+Grid and flexbox.
+The basic difference between CSS grid layout and CSS flexbox layout 
+is that flexbox was designed for layout in one dimension - either a row or a column.
+ Grid was designed for two-dimensional layout - rows, and columns at the same tim
+
+////////////////////////////////////////////
+scrolling
+
+scrolling sid bar
+html { scroll-behavior: smooth; }
+html { scroll-behavior: auto }
+
+Scroll Indicator
+window.onscroll = function() {myFunction()};
+function myFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("myP").className = "test";
+  } else {
+    document.getElementById("myP").className = "";
+  }
+}
+
+/* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+object.addEventListener("scroll", myScript);
+//////////////////////////////////////////////////////////////////////////////////
+Selector		Example			Example description
+.class			.intro			Selects all elements with class="intro"
+.class1			.class2	.name1.name2	Selects all elements with both name1 and name2 set within its class attribute
+.class1 		.class2	.name1 .name2	Selects all elements with name2 that is a descendant of an element with name1
+#id			#firstname		Selects the element with id="firstname"
+*			*			Selects all elements
+element	p					Selects all <p> elements
+element.class		p.intro			Selects all <p> elements with class="intro"
+element,element		div, p			Selects all <div> elements and all <p> elements
+element element		div p			Selects all <p> elements inside <div> elements
+element>element		div > p			Selects all <p> elements where the parent is a <div> element
+element+element		div + p			Selects the first <p> element that is placed immediately after <div> elements
+element1~element2	p ~ ul			Selects every <ul> element that is preceded by a <p> element
+[attribute]		[target]		Selects all elements with a target attribute
+[attribute=value]	[target="_blank"]	Selects all elements with target="_blank"
+[attribute~=value]	[title~="flower"]	Selects all elements with a title attribute containing the word "flower"
+[attribute|=value]	[lang|="en"]	        Selects all elements with a lang attribute value equal to "en" or starting with "en-"
+[attribute^=value]	a[href^="https"]	Selects every <a> element whose href attribute value begins with "https"
+[attribute$=value]	a[href$=".pdf"]		Selects every <a> element whose href attribute value ends with ".pdf"
+[attribute*=value]	a[href*="w3schools"]	Selects every <a> element whose href attribute value contains the substring "w3schools"
+:active			a:active		Selects the active link
+::after			p::after		Insert something after the content of each <p> element
+::before	        p::before		Insert something before the content of each <p> element
+:checked	        input:checked		Selects every checked <input> element
+:default	        input:default		Selects the default <input> element
+:disabled	        input:disabled		Selects every disabled <input> element
+:empty			p:empty	       	 	Selects every <p> element that has no children (including text nodes)
+:enabled	        input:enabled		Selects every enabled <input> element
+:first-child	        p:first-child		Selects every <p> element that is the first child of its parent
+::first-letter	        p::first-letter		Selects the first letter of every <p> element
+::first-line	        p::first-line		Selects the first line of every <p> element
+:first-of-type	        p:first-of-type		Selects every <p> element that is the first <p> element of its parent
+:focus			input:focus		Selects the input element which has focus
+:fullscreen	        :fullscreen		Selectsssssssss the element that is in full-screen mode
+:hover			a:hover	        	Selects links on mouse over
+:in-range	        input:in-range		Selects input elements with a value within a specified range
+:indeterminate	        input:indeterminate	Selects input elements that are in an indeterminate state
+:invalid	        input:invalid		Selects all input elements with an invalid value
+:lang(language)  	p:lang(it)		Selects every <p> element with a lang attribute equal to "it" (Italian)
+:last-child    	        p:last-child		Selects every <p> element that is the last child of its parent
+:last-of-type		p:last-of-type		Selects every <p> element that is the last <p> element of its parent
+:link			a:link			Selects all unvisited links
+::marker		::marker		Selects the markers of list items
+:not(selector)		:not(p)			Selects every element that is not a <p> element
+:nth-child(n)		p:nth-child(2)		Selects every <p> element that is the second child of its parent
+:nth-last-child(n)	p:nth-last-child(2)	Selects every <p> element that is the second child of its parent, counting from the last child
+:nth-last-of-type(n)	p:nth-last-of-type(2)	Selects every <p> element that is the second <p> element of its parent, counting from the last child
+:nth-of-type(n)		p:nth-of-type(2)	Selects every <p> element that is the second <p> element of its parent
+:only-of-type		p:only-of-type		Selects every <p> element that is the only <p> element of its parent
+:only-child		p:only-child		Selects every <p> element that is the only child of its parent
+:optional		input:optional		Selects input elements with no "required" attribute
+:out-of-range		input:out-of-range	Selects input elements with a value outside a specified range
+::placeholder		input::placeholder	Selects input elements with the "placeholder" attribute specified
+:read-only		input:read-only		Selects input elements with the "readonly" attribute specified
+:read-write		input:read-write	Selects input elements with the "readonly" attribute NOT specified
+:required		input:required		Selects input elements with the "required" attribute specified
+:root			:root			Selects the document's root element
+::selection		::selection		Selects the portion of an element that is selected by a user
+:target			#news:target		Selects the current active #news element (clicked on a URL containing that anchor name)
+:valid			input:valid		Selects all input elements with a valid value
+:visited		a:visited		Selects all visited links
+
+//////////////////////////////////////////////////////////////////
+Default CSS Values for HTML Elements
+Element	Default CSS Value	Try it
+a:link	color: (internal value);
+text-decoration: underline;
+cursor: auto;	
+a:visited	color: (internal value);
+text-decoration: underline;
+cursor: auto;	
+a:link:active	color: (internal value);
+a:visited:active	color: (internal value);
+abbr	None.	
+address	display: block;
+font-style: italic;	
+area	display: none;	
+article	display: block;	
+aside	display: block;	
+audio	None.	
+b	font-weight: bold;	
+base	None.	
+bdi	None.	
+bdo	unicode-bidi: bidi-override;	
+blockquote	display: block;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 40px;
+margin-right: 40px;	
+body	display: block;
+margin: 8px;	
+body:focus	outline: none;	
+br	None.	
+button	None	
+canvas	None.	
+caption	display: table-caption;
+text-align: center;	
+cite	font-style: italic;	
+code	font-family: monospace;	
+col	display: table-column;	
+colgroup	display: table-column-group	
+datalist	display: none;	
+dd	display: block;
+margin-left: 40px;	
+del	text-decoration: line-through;	
+details	display: block;	
+dfn	font-style: italic;	
+dialog	None.	
+div	display: block;	
+dl	display: block;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 0;
+margin-right: 0;	
+dt	display: block;	
+em	font-style: italic;	
+embed:focus	outline: none;	
+fieldset	display: block;
+margin-left: 2px;
+margin-right: 2px;
+padding-top: 0.35em;
+padding-bottom: 0.625em;
+padding-left: 0.75em;
+padding-right: 0.75em;
+border: 2px groove (internal value);	
+figcaption	display: block;	
+figure	display: block;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 40px;
+margin-right: 40px;	
+footer	display: block;	
+form	display: block;
+margin-top: 0em;	
+h1	display: block;
+font-size: 2em;
+margin-top: 0.67em;
+margin-bottom: 0.67em;
+margin-left: 0;
+margin-right: 0;
+font-weight: bold;	
+h2	display: block;
+font-size: 1.5em;
+margin-top: 0.83em;
+margin-bottom: 0.83em;
+margin-left: 0;
+margin-right: 0;
+font-weight: bold;	
+h3	display: block;
+font-size: 1.17em;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 0;
+margin-right: 0;
+font-weight: bold;	
+h4	display: block;
+margin-top: 1.33em;
+margin-bottom: 1.33em;
+margin-left: 0;
+margin-right: 0;
+font-weight: bold;	
+h5	display: block;
+font-size: .83em;
+margin-top: 1.67em;
+margin-bottom: 1.67em;
+margin-left: 0;
+margin-right: 0;
+font-weight: bold;	
+h6	display: block;
+font-size: .67em;
+margin-top: 2.33em;
+margin-bottom: 2.33em;
+margin-left: 0;
+margin-right: 0;
+font-weight: bold;	
+head	display: none;	
+header	display: block;	
+hr	display: block;
+margin-top: 0.5em;
+margin-bottom: 0.5em;
+margin-left: auto;
+margin-right: auto;
+border-style: inset;
+border-width: 1px;	
+html	display: block;	
+html:focus	outline: none;	
+i	font-style: italic;	
+iframe:focus	outline: none;	
+iframe[seamless]	display: block;	
+img	display: inline-block;	
+input	None.	
+ins	text-decoration: underline;	
+kbd	font-family: monospace;	
+label	cursor: default;	
+legend	display: block;
+padding-left: 2px;
+padding-right: 2px;
+border: none;	
+li	display: list-item;	
+link	display: none;	
+main	None.	
+map	display: inline;	
+mark	background-color: yellow;
+color: black;	
+menu	display: block;
+list-style-type: disc;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 0;
+margin-right: 0;
+padding-left: 40px;	
+menuitem	None.	
+meta	None.	
+meter	None.	
+nav	display: block;	
+noscript	None.	
+object:focus	outline: none;	
+ol	display: block;
+list-style-type: decimal;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 0;
+margin-right: 0;
+padding-left: 40px;	
+optgroup	None.	
+option	None.	
+output	display: inline;	
+p	display: block;
+margin-top: 1em;
+margin-bottom: 1em;
+margin-left: 0;
+margin-right: 0;	
+param	display: none;	
+picture	None.	
+pre	display: block;
+font-family: monospace;
+white-space: pre;
+margin: 1em 0;	
+progress	None.	
+q	display: inline;	
+q::before	content: open-quote;	
+q::after	content: close-quote;	
+rp	None.	
+rt	line-height: normal;	
+ruby	None.	
+s	text-decoration: line-through;	
+samp	font-family: monospace;	
+script	display: none;	
+section	display: block;	
+select	None.	
+small	font-size: smaller;	
+source	None.	
+span	None.	
+strike	text-decoration: line-through;	
+strong	font-weight: bold;	
+style	display: none;	
+sub	vertical-align: sub;
+font-size: smaller;	
+summary	display: block;	
+sup	vertical-align: super;
+font-size: smaller;	
+table	display: table;
+border-collapse: separate;
+border-spacing: 2px;
+border-color: gray;	
+tbody	display: table-row-group;
+vertical-align: middle;
+border-color: inherit;	
+td	display: table-cell;
+vertical-align: inherit;	
+template	None.	
+textarea	None.	
+tfoot	display: table-footer-group;
+vertical-align: middle;
+border-color: inherit;	
+th	display: table-cell;
+vertical-align: inherit;
+font-weight: bold;
+text-align: center;	
+thead	display: table-header-group;
+vertical-align: middle;
+border-color: inherit;	
+time	None.	
+title	display: none;	
+tr	display: table-row;
+vertical-align: inherit;
+border-color: inherit;	
+track	None.	
+u	text-decoration: underline;	
+ul	display: block;
+list-style-type: disc;
+margin-top: 1em;
+margin-bottom: 1 em;
+margin-left: 0;
+margin-right: 0;
+padding-left: 40px;	
+var	font-style: italic;	
+video	None.	
+wbr	None.
+
+/////////////////////////////////////////////
+CSS Entity 
+h2:after {
+  content: ' \00A7';
+}
+
+//////////////////////////////////////////////////////////
+input[type=checkbox] {
+  accent-color: red;
+}
+
+input[type=radio] {
+  accent-color: green;
+}
+
+input[type=range] {
+  accent-color: rgb(0, 0, 255);
+}
+
+progress {
+  accent-color: hsl(39, 100%, 50%);
+}
+
+///////////////////////////////////////////////////////
+
+space-evenly	Lines are evenly distributed in the flex container, with equal space around them
+
+//////////////////////////////////
+
+div {
+  aspect-ratio: 3 / 2;
+}
+aspect-ratio: w / h;
+
+he aspect-ratio property allows you to define the ratio between width and height of an element.
+
+/////////////////////////////////////////////////////////
+
+backdrop-filter:Add a graphical effect to the area behind an element:
+div.transbox {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+blur()
+brightness()
+contrast()
+drop-shadow()
+grayscale()
+hue-rotate()
+invert()
+opacity()
+sepia()
+saturate()
+
+///////////////////////////////////////
